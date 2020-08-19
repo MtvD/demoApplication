@@ -24,6 +24,7 @@
 		FA215D5824ED5FE3007D9B84 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA215D5624ED5FE3007D9B84 /* NewsCell.swift */; };
 		FA215D5924ED5FE3007D9B84 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA215D5724ED5FE3007D9B84 /* NewsCell.xib */; };
 		FA215D5B24ED6F5F007D9B84 /* BaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA215D5A24ED6F5F007D9B84 /* BaseItem.swift */; };
+		FA215D5E24ED6FD5007D9B84 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA215D5D24ED6FD5007D9B84 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		FA215D5624ED5FE3007D9B84 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		FA215D5724ED5FE3007D9B84 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		FA215D5A24ED6F5F007D9B84 /* BaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseItem.swift; sourceTree = "<group>"; };
+		FA215D5D24ED6FD5007D9B84 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		FA215D1524EC054F007D9B84 /* demoApplication */ = {
 			isa = PBXGroup;
 			children = (
+				FA215D5C24ED6FBC007D9B84 /* Network */,
 				FA215D4C24ED4BED007D9B84 /* ViewController */,
 				FA215D4B24ED4BE0007D9B84 /* Model */,
 				FA215D4A24ED4BD9007D9B84 /* ViewModel */,
@@ -225,6 +228,14 @@
 				FA215D5724ED5FE3007D9B84 /* NewsCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA215D5C24ED6FBC007D9B84 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FA215D5D24ED6FD5007D9B84 /* APIService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,6 +485,7 @@
 				FA215D5824ED5FE3007D9B84 /* NewsCell.swift in Sources */,
 				FA215D5024ED4C9C007D9B84 /* ThirdViewController.swift in Sources */,
 				FA215D2124EC054F007D9B84 /* demoApplication.xcdatamodeld in Sources */,
+				FA215D5E24ED6FD5007D9B84 /* APIService.swift in Sources */,
 				FA215D1724EC054F007D9B84 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
