@@ -56,6 +56,7 @@ class Article: BaseItem {
         url = json["url"] as? String ?? ""
         urlToImage = json["urlToImage"] as? String ?? ""
         publishedAt = json["publishedAt"] as? String ?? ""
+        content = json["content"] as? String ?? ""
     }
     
     required init(coder aDecoder: NSCoder) {

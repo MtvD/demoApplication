@@ -12,7 +12,7 @@ import Alamofire
 //Path URL Request
 enum ApiType {
     case api1
-    case api2
+    case apiTopHeadLine
     case api3
     case api4
     case api5
@@ -22,7 +22,7 @@ enum ApiType {
         switch self {
         case .api1:
             return "/everything?q=bitcoin"
-        case .api2:
+        case .apiTopHeadLine:
             return "/top-headlines?country=us"
         case .api3:
             return "/everything?q=apple"
@@ -31,7 +31,7 @@ enum ApiType {
         case .api5:
             return "/everything?domains=wsj.com"
         case .apiCustom:
-            return "/{firststring}?{key}={value}"
+            return "/everything?q={firststring}"
         }
     }
 }
@@ -55,16 +55,10 @@ class APIService: NSObject {
         return URL(string: self.enviroment.rawValue + type.getPath())!
     }
     
-    func customeUrl(type: ApiType, firstString: String, key: String, value: String) -> URL {
+    func customeUrl(firstString: String) -> URL {
+        let type = ApiType.apiCustom
         var stringURL = self.enviroment.rawValue + type.getPath()
-        
-        let map = ["{firststring}" : firstString,
-                   "{key}" : key,
-                   "value" : value] as [String : Any]
-        
-        for (key, value) in map {
-            stringURL = stringURL.replacingOccurrences(of: key, with: "\(value)")
-        }
+        stringURL = stringURL.replacingOccurrences(of: "{firststring}", with: firstString)
         
         if let url = URL(string: stringURL) {
             return url

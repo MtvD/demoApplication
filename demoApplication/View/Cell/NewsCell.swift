@@ -9,16 +9,26 @@
 import UIKit
 
 class NewsCell: UITableViewCell {
-
+    @IBOutlet weak var imgView: AsyncImageView!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var contentLbl: UILabel!
+    
+    var data: Article! {
+        didSet {
+            imgView.loadImgUsingUrlString(urlString: data.urlToImage!)
+            titleLbl.text = data.author
+            contentLbl.text = data.title
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        selectionStyle = .none
+        
+        contentLbl.numberOfLines = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
 }
