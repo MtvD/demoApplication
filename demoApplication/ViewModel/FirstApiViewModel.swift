@@ -18,7 +18,7 @@ class FirstApiViewModel {
     
     func getList(type: ApiType) {
         let params : [String : Any] = [
-            "from" : "2020-07-\(getCurrentDate())",
+            "from" : "2020-\(getMonth())-\(getCurrentDate())",
             "sortBy" : "publishedAt",
             "apiKey" : "4c78908e21b24d84bc56cb462d3e4424"
         ]
@@ -47,7 +47,7 @@ class FirstApiViewModel {
     
     func getCustomLink(str: String) {
         let params : [String : Any] = [
-            "from" : "2020-07-\(getCurrentDate())",
+            "from" : "2020-\(getMonth())-\(getCurrentDate())",
             "sortBy" : "publishedAt",
             "apiKey" : "4c78908e21b24d84bc56cb462d3e4424"
         ]

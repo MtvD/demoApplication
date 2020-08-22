@@ -20,6 +20,15 @@ func getCurrentDate() -> String {
     return dateResult
 }
 
+func getMonth() -> String {
+    let date = Date()
+    let formatter = DateFormatter()
+    formatter.dateFormat = "MM"
+    let dateResult = formatter.string(from: date)
+    let intMonth = (Int(dateResult) ?? 0) - 1
+    return String(format: "%02d", intMonth)
+}
+
 class AsyncImageView: UIImageView {
     var imageUrlString: String?
     

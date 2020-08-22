@@ -19,7 +19,8 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.title = "Custom News List"
+
         viewModel.delegate = self
         viewModel.getCustomLink(str: titles.first ?? "")
         
