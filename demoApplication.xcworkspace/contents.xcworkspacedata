@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/macbook/Desktop/MTVD/demoApplication/Model/UserData+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/macbook/Desktop/MTVD/demoApplication/Model/UserData+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:demoApplication.xcodeproj">
    </FileRef>
    <FileRef

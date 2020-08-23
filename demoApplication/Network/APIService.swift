@@ -37,7 +37,7 @@ enum ApiType {
 }
 
 enum Environment : String {
-    case dev = "http://newsapi.org/v2"
+    case dev = ""
     
     func getEnviromentName() -> String {
         switch self {
